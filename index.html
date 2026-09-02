@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>차준혁 — 세원대학교 법학전문대학원</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @keyframes slowZoom {
+    from { transform: scale(1.06); }
+    to   { transform: scale(1); }
+  }
+
+  @keyframes fall {
+    0%   { transform: translateY(-20px) rotate(0deg) translateX(0); opacity: 0.8; }
+    100% { transform: translateY(900px) rotate(360deg) translateX(60px); opacity: 0; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .char-photo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+  }
+
+  .namecard::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+  }
+
+  .info-block-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(201, 168, 76, 0.2);
+  }
+
+  .quote-block::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    color: rgba(201, 168, 76, 0.3);
+    position: absolute;
+    top: -10px;
+    left: 14px;
+    line-height: 1;
+  }
+
+  .info-block:hover {
+    border-color: rgba(201,168,76,0.45);
+  }
+
+  .tag:hover {
+    background: rgba(201,168,76,0.15);
+    border-color: #c9a84c;
+  }
+
+</style>
+</head>
+<body style="background:#000; color:#f5f0e8; font-family:'Noto Sans KR',sans-serif; font-weight:300; min-height:100vh; overflow-x:hidden;">
+
+<!-- HERO + PETALS WRAPPER -->
+<div id="petals-wrapper" style="position:relative; overflow:hidden;">
+
+  <!-- 벚꽃 파티클 (히어로~디바이더 전체 영역) -->
+  <div style="position:absolute; inset:0; pointer-events:none; z-index:3;">
+    <div style="position:absolute; top:-20px; left:5vw; width:8px; height:9px; background:hsla(345,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 12s linear 0s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:12vw; width:7px; height:7px; background:hsla(350,80%,85%,0.7); border-radius:50%; animation:fall 15s linear 2s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:20vw; width:10px; height:8px; background:hsla(342,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 10s linear 1s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:28vw; width:6px; height:6px; background:hsla(348,80%,85%,0.7); border-radius:50%; animation:fall 14s linear 4s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:35vw; width:9px; height:10px; background:hsla(344,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 11s linear 3s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:42vw; width:7px; height:8px; background:hsla(352,80%,85%,0.7); border-radius:50%; animation:fall 16s linear 6s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:48vw; width:11px; height:9px; background:hsla(340,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 9s linear 0.5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:55vw; width:8px; height:7px; background:hsla(346,80%,85%,0.7); border-radius:50%; animation:fall 13s linear 5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:62vw; width:6px; height:8px; background:hsla(355,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 17s linear 8s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:70vw; width:10px; height:10px; background:hsla(341,80%,85%,0.7); border-radius:50%; animation:fall 10s linear 2.5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:76vw; width:7px; height:6px; background:hsla(349,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 14s linear 7s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:83vw; width:9px; height:9px; background:hsla(343,80%,85%,0.7); border-radius:50%; animation:fall 12s linear 1.5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:90vw; width:8px; height:7px; background:hsla(347,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 15s linear 9s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:95vw; width:6px; height:8px; background:hsla(351,80%,85%,0.7); border-radius:50%; animation:fall 11s linear 4.5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:8vw; width:10px; height:11px; background:hsla(340,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 16s linear 10s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:18vw; width:7px; height:7px; background:hsla(354,80%,85%,0.7); border-radius:50%; animation:fall 13s linear 3.5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:32vw; width:9px; height:8px; background:hsla(342,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 10s linear 6.5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:45vw; width:8px; height:9px; background:hsla(348,80%,85%,0.7); border-radius:50%; animation:fall 18s linear 11s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:58vw; width:11px; height:10px; background:hsla(345,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 9s linear 1.8s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:67vw; width:6px; height:7px; background:hsla(350,80%,85%,0.7); border-radius:50%; animation:fall 14s linear 7.5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:78vw; width:8px; height:8px; background:hsla(344,80%,85%,0.7); border-radius:50% 0 50% 0; animation:fall 12s linear 5.5s infinite;"></div>
+    <div style="position:absolute; top:-20px; left:88vw; width:7px; height:9px; background:hsla(353,80%,85%,0.7); border-radius:50%; animation:fall 15s linear 8.5s infinite;"></div>
+  </div>
+
+  <!-- 배경 이미지 (독립 영역) -->
+  <div style="width:100%; overflow:hidden;">
+    <img
+      style="width:100%; height:25vh; min-height:150px; filter:brightness(0.55) saturate(0.8); display:block; animation:slowZoom 20s ease-out forwards;"
+      src="https://i.imgur.com/k7ghoD8.jpeg"
+      alt="세원대학교 벚꽃">
+  </div>
+
+  <!-- HERO 텍스트 -->
+  <div style="position:relative; z-index:2; width:100%; padding:24px 0; animation:fadeUp 1.2s ease 0.3s both;">
+    <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(9px,0.9vw,11px); letter-spacing:0.35em; color:#c9a84c; text-transform:uppercase; margin-bottom:6px;">Sewon University · School of Law</p>
+    <h1 style="font-family:'Noto Serif KR',serif; font-size:clamp(0.85rem,1.5vw,1.15rem); font-weight:300; letter-spacing:0.08em; line-height:1.15; margin-bottom:12px;">세원대학교</h1>
+    <div style="background:rgba(255,255,255,0.08); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,0.15); border-left:3px solid #c9a84c; padding:20px 24px; border-radius:2px;">
+      <p style="font-size:clamp(12px,1.25vw,14px); line-height:1.9; color:rgba(245,240,232,0.85); word-break:keep-all;">
+        대형 로펌 최연소 파트너 변호사 출신.<br>
+        실제 기업 인수합병 현장에서 쌓은 실무를 강단에 옮기며,
+        모교 세원대학교 로스쿨 전임교수로 전격 임용되었다.<br>
+        이론이 아닌 현실의 법을 가르친다.
+      </p>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div style="position:relative; z-index:4; display:flex; align-items:center; gap:16px; padding:20px 8vw 0;">
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.2);"></div>
+    <div style="width:6px; height:6px; background:#c9a84c; transform:rotate(45deg); flex-shrink:0;"></div>
+    <span style="font-family:'Cormorant Garamond',serif; font-size:11px; letter-spacing:0.3em; color:#c9a84c; text-transform:uppercase; white-space:nowrap;">Character Profile</span>
+    <div style="width:6px; height:6px; background:#c9a84c; transform:rotate(45deg); flex-shrink:0;"></div>
+    <div style="flex:1; height:1px; background:rgba(201,168,76,0.2);"></div>
+  </div>
+
+</div>
+
+<!-- PROFILE -->
+<section class="profile-section" style="padding:20px 8vw 80px; display:flex; flex-direction:column; gap:24px; animation:fadeUp 1s ease 0.2s both;">
+
+  <!-- LEFT -->
+  <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+    <div class="char-photo-wrap" style="position:relative; width:35%; aspect-ratio:3/4; overflow:hidden; border:1px solid rgba(201,168,76,0.2);">
+      <img
+        src="https://i.imgur.com/iR4ukST.png"
+        alt="차준혁"
+        style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;">
+      <div style="position:absolute; width:16px; height:16px; border-color:#c9a84c; border-style:solid; z-index:2; top:10px; left:10px; border-width:1px 0 0 1px;"></div>
+      <div style="position:absolute; width:16px; height:16px; border-color:#c9a84c; border-style:solid; z-index:2; top:10px; right:10px; border-width:1px 1px 0 0;"></div>
+      <div style="position:absolute; width:16px; height:16px; border-color:#c9a84c; border-style:solid; z-index:2; bottom:10px; left:10px; border-width:0 0 1px 1px;"></div>
+      <div style="position:absolute; width:16px; height:16px; border-color:#c9a84c; border-style:solid; z-index:2; bottom:10px; right:10px; border-width:0 1px 1px 0;"></div>
+    </div>
+
+    <!-- 명함 -->
+    <div class="namecard" style="width:100%; background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.2); padding:20px; position:relative; overflow:hidden;">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.25em; color:#c9a84c; text-transform:uppercase; margin-bottom:8px;">Sewon Univ. School of Law</p>
+      <p style="font-family:'Noto Serif KR',serif; font-size:1.5rem; font-weight:400; letter-spacing:0.15em; margin-bottom:4px;">차 준 혁</p>
+      <p style="font-size:11px; color:#9a9a9a; letter-spacing:0.1em; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid rgba(201,168,76,0.2);">전임교수 · 기업법 / M&amp;A / 상법</p>
+      <div style="display:flex; gap:8px; margin-bottom:6px; font-size:11px;"><span style="color:#c9a84c; letter-spacing:0.1em; flex-shrink:0; font-family:'Cormorant Garamond',serif;">Age</span><span style="color:rgba(245,240,232,0.7);">39세</span></div>
+      <div style="display:flex; gap:8px; margin-bottom:6px; font-size:11px;"><span style="color:#c9a84c; letter-spacing:0.1em; flex-shrink:0; font-family:'Cormorant Garamond',serif;">Alma</span><span style="color:rgba(245,240,232,0.7);">세원대학교 법학과 (모교 임용)</span></div>
+      <div style="display:flex; gap:8px; margin-bottom:6px; font-size:11px;"><span style="color:#c9a84c; letter-spacing:0.1em; flex-shrink:0; font-family:'Cormorant Garamond',serif;">Former</span><span style="color:rgba(245,240,232,0.7);">법무법인 태인 파트너 변호사</span></div>
+    </div>
+
+    <!-- 키워드 태그 -->
+    <div style="width:100%; display:flex; flex-wrap:wrap; gap:6px; margin-top:4px; margin-bottom:24px;">
+      <span class="tag" style="font-size:10px; letter-spacing:0.12em; padding:4px 10px; border:1px solid rgba(201,168,76,0.2); color:#e8d5a3; background:rgba(201,168,76,0.06); transition:all 0.2s; cursor:default;"># 냉소주의</span>
+      <span class="tag" style="font-size:10px; letter-spacing:0.12em; padding:4px 10px; border:1px solid rgba(201,168,76,0.2); color:#e8d5a3; background:rgba(201,168,76,0.06); transition:all 0.2s; cursor:default;"># 완벽주의</span>
+      <span class="tag" style="font-size:10px; letter-spacing:0.12em; padding:4px 10px; border:1px solid rgba(201,168,76,0.2); color:#e8d5a3; background:rgba(201,168,76,0.06); transition:all 0.2s; cursor:default;"># 변호사 출신</span>
+      <span class="tag" style="font-size:10px; letter-spacing:0.12em; padding:4px 10px; border:1px solid rgba(201,168,76,0.2); color:#e8d5a3; background:rgba(201,168,76,0.06); transition:all 0.2s; cursor:default;"># 최연소</span>
+      <span class="tag" style="font-size:10px; letter-spacing:0.12em; padding:4px 10px; border:1px solid rgba(201,168,76,0.2); color:#e8d5a3; background:rgba(201,168,76,0.06); transition:all 0.2s; cursor:default;"># M&amp;A 전문</span>
+      <span class="tag" style="font-size:10px; letter-spacing:0.12em; padding:4px 10px; border:1px solid rgba(201,168,76,0.2); color:#e8d5a3; background:rgba(201,168,76,0.06); transition:all 0.2s; cursor:default;"># 감정 통제</span>
+      <span class="tag" style="font-size:10px; letter-spacing:0.12em; padding:4px 10px; border:1px solid rgba(201,168,76,0.2); color:#e8d5a3; background:rgba(201,168,76,0.06); transition:all 0.2s; cursor:default;"># 네임 보유자</span>
+      <span class="tag" style="font-size:10px; letter-spacing:0.12em; padding:4px 10px; border:1px solid rgba(201,168,76,0.2); color:#e8d5a3; background:rgba(201,168,76,0.06); transition:all 0.2s; cursor:default;"># 거리두기</span>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div style="display:flex; flex-direction:column; gap:20px;">
+
+    <!-- 외형 -->
+    <div class="info-block" style="background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.2); padding:22px 24px; position:relative; transition:border-color 0.2s;">
+      <p class="info-block-title" style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.35em; color:#c9a84c; text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;">Appearance</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <span style="font-size:9px; letter-spacing:0.2em; color:#c9a84c; font-family:'Cormorant Garamond',serif; text-transform:uppercase;">Height</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75);">188cm · 슬림 근육질</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <span style="font-size:9px; letter-spacing:0.2em; color:#c9a84c; font-family:'Cormorant Garamond',serif; text-transform:uppercase;">Hair</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75);">매트 흑발 포마드 — 완벽히 고정</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <span style="font-size:9px; letter-spacing:0.2em; color:#c9a84c; font-family:'Cormorant Garamond',serif; text-transform:uppercase;">Eyes</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75);">얼음빛 파란 눈동자 · 금속테 안경</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <span style="font-size:9px; letter-spacing:0.2em; color:#c9a84c; font-family:'Cormorant Garamond',serif; text-transform:uppercase;">Scent</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75);">차가운 금속 + 시더우드 향수</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <span style="font-size:9px; letter-spacing:0.2em; color:#c9a84c; font-family:'Cormorant Garamond',serif; text-transform:uppercase;">Style</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75);">딱 떨어지는 수트 · 매일 정장</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:4px;">
+          <span style="font-size:9px; letter-spacing:0.2em; color:#c9a84c; font-family:'Cormorant Garamond',serif; text-transform:uppercase;">Name Mark</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75);">왼쪽 가슴, 심장 바로 위 — 37세 발현</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 경력 타임라인 -->
+    <div class="info-block" style="background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.2); padding:22px 24px; position:relative; transition:border-color 0.2s;">
+      <p class="info-block-title" style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.35em; color:#c9a84c; text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;">Career</p>
+      <div style="display:flex; flex-direction:column; gap:0;">
+        <div style="display:grid; grid-template-columns:60px 1fr; gap:0 16px; padding:10px 0; border-bottom:1px solid rgba(201,168,76,0.08);">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:12px; color:#c9a84c; letter-spacing:0.08em; padding-top:2px;">20대 초</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75); line-height:1.7;">사법시험 합격 — 동기 중 최연소</span>
+        </div>
+        <div style="display:grid; grid-template-columns:60px 1fr; gap:0 16px; padding:10px 0; border-bottom:1px solid rgba(201,168,76,0.08);">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:12px; color:#c9a84c; letter-spacing:0.08em; padding-top:2px;">30대 중</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75); line-height:1.7;">법무법인 태인 최연소 파트너 변호사 승진</span>
+        </div>
+        <div style="display:grid; grid-template-columns:60px 1fr; gap:0 16px; padding:10px 0; border-bottom:1px solid rgba(201,168,76,0.08);">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:12px; color:#c9a84c; letter-spacing:0.08em; padding-top:2px;">임용 전</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75); line-height:1.7;">은사의 추천으로 로스쿨 실무 강의 시작 — 이례적 호응</span>
+        </div>
+        <div style="display:grid; grid-template-columns:60px 1fr; gap:0 16px; padding:10px 0;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:12px; color:#c9a84c; letter-spacing:0.08em; padding-top:2px;">현재</span>
+          <span style="font-size:12px; color:rgba(245,240,232,0.75); line-height:1.7;">세원대학교 법학전문대학원 전임교수 (모교 임용)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 성격 -->
+    <div class="info-block" style="background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.2); padding:22px 24px; position:relative; transition:border-color 0.2s;">
+      <p class="info-block-title" style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.35em; color:#c9a84c; text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;">Personality</p>
+      <p style="font-size:12.5px; line-height:1.95; color:rgba(245,240,232,0.72); word-break:keep-all;">
+        감정·운명·초자연 따위는 철저히 배제하고 <strong style="color:#e8d5a3">법과 논리, 증명 가능한 이성만을 신봉</strong>하는 극단적 냉소주의자.
+        모든 상황을 통제 아래 두어야 직성이 풀리는 완벽주의자이며, 자신의 감정조차 계산하여 표출한다.
+        타인과는 항상 일정한 거리를 유지하며, 자신에게 발현된 네임을 <em style="color:#9a9a9a">'인생의 불필요한 오류'</em>로 규정하고 혐오한다.
+      </p>
+    </div>
+
+    <!-- 예시 대사 -->
+    <div class="info-block" style="background:rgba(255,255,255,0.04); border:1px solid rgba(201,168,76,0.2); padding:22px 24px; position:relative; transition:border-color 0.2s;">
+      <p class="info-block-title" style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.35em; color:#c9a84c; text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;">Voice</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="quote-block" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.2); border-left:3px solid #c9a84c; padding:18px 22px; position:relative;">
+          <p style="font-family:'Noto Serif KR',serif; font-size:13px; line-height:1.9; color:rgba(245,240,232,0.8); padding-left:10px; word-break:keep-all;"><em style="color:#e8d5a3; font-style:normal;">"용건만 간단히 하죠."</em></p>
+        </div>
+        <div class="quote-block" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.2); border-left:3px solid #c9a84c; padding:18px 22px; position:relative;">
+          <p style="font-family:'Noto Serif KR',serif; font-size:13px; line-height:1.9; color:rgba(245,240,232,0.8); padding-left:10px; word-break:keep-all;"><em style="color:#e8d5a3; font-style:normal;">"증명할 수 없다면, 존재하지 않는 겁니다."</em><br>
+          <span style="font-size:11px; color:#9a9a9a;">— 수업 중, 운명에 관한 학생의 질문에 답하며</span></p>
+        </div>
+        <div class="quote-block" style="background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.2); border-left:3px solid #c9a84c; padding:18px 22px; position:relative;">
+          <p style="font-family:'Noto Serif KR',serif; font-size:13px; line-height:1.9; color:rgba(245,240,232,0.8); padding-left:10px; word-break:keep-all;"><em style="color:#e8d5a3; font-style:normal;">"감정은 변수입니다. 나는 상수만 다룹니다."</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 네임 시스템 -->
+    <div style="background:linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.03) 100%); border:1px solid rgba(201,168,76,0.4); padding:28px 28px 24px; position:relative; overflow:hidden;">
+      <!-- 상단 골드 라인 -->
+      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, transparent, #c9a84c, #e8d5a3, #c9a84c, transparent);"></div>
+
+      <!-- 타이틀 -->
+      <p style="font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:700; letter-spacing:0.35em; color:#e8d5a3; text-transform:uppercase; text-align:center; margin-bottom:20px; text-shadow:0 0 12px rgba(201,168,76,0.5);">&#9830; Name System &#9830;</p>
+
+      <!-- 정의 -->
+      <p style="font-size:12px; line-height:1.85; color:rgba(245,240,232,0.7); word-break:keep-all; margin-bottom:18px; text-align:center;">
+        운명의 상대 이름이 신체에 <span style="color:#e8d5a3;">지워지지 않는 낙인</span>으로 새겨지는 현상.<br>
+        부위·시기는 개인마다 다르며, 물리적 방법으로 훼손 불가.<br>
+        서로의 이름이 교차로 새겨진 <span style="color:#e8d5a3;">쌍방 각인</span> 혹은 한쪽만 새겨진 <span style="color:#e8d5a3;">일방 각인</span>이 존재.
+      </p>
+
+      <!-- 근접 반응 단계 -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px;">
+        <div style="background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.25); padding:14px 16px;">
+          <p style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.2em; color:#c9a84c; margin-bottom:6px;">PHASE 1 — 10m</p>
+          <p style="font-size:11px; color:rgba(245,240,232,0.65); line-height:1.7;">미세한 열감, 심박 불규칙<br>상대의 존재를 본능적으로 감지</p>
+        </div>
+        <div style="background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.25); padding:14px 16px;">
+          <p style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.2em; color:#c9a84c; margin-bottom:6px;">PHASE 2 — 5m</p>
+          <p style="font-size:11px; color:rgba(245,240,232,0.65); line-height:1.7;">화상 같은 열기, 각인이 붉게 점멸<br>이성이 흐트러지고 호흡 가빠짐</p>
+        </div>
+        <div style="background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.25); padding:14px 16px;">
+          <p style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.2em; color:#c9a84c; margin-bottom:6px;">PHASE 3 — 접촉</p>
+          <p style="font-size:11px; color:rgba(245,240,232,0.65); line-height:1.7;">강렬한 쾌락과 통증이 동시에 덮침<br>본능적 소유욕, 통제력 완전 상실</p>
+        </div>
+        <div style="background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.25); padding:14px 16px;">
+          <p style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.2em; color:#c9a84c; margin-bottom:6px;">WITHDRAWAL</p>
+          <p style="font-size:11px; color:rgba(245,240,232,0.65); line-height:1.7;">물리적 이격 시 열기는 가라앉으나<br>상실감·갈증·피로가 금단처럼 지속</p>
+        </div>
+      </div>
+
+      <!-- 소멸 & 해소 조건 (강조) -->
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="background:rgba(201,168,76,0.18); border:1px solid #c9a84c; padding:16px 20px; position:relative;">
+          <div style="position:absolute; top:0; left:0; bottom:0; width:4px; background:#c9a84c;"></div>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.3em; color:#c9a84c; margin-bottom:6px;">&#9888; 해소조건</p>
+          <p style="font-size:12px; color:#e8d5a3; line-height:1.8; word-break:keep-all;">네임 주인과의 스킨십으로 해소. <span style="color:rgba(245,240,232,0.6);">진한 접촉일수록 다음 반응까지의 대기시간이 길어진다.</span></p>
+        </div>
+        <div style="background:rgba(201,168,76,0.18); border:1px solid #c9a84c; padding:16px 20px; position:relative;">
+          <div style="position:absolute; top:0; left:0; bottom:0; width:4px; background:#c9a84c;"></div>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:10px; letter-spacing:0.3em; color:#c9a84c; margin-bottom:6px;">&#9760; 소멸조건</p>
+          <p style="font-size:12px; color:#e8d5a3; line-height:1.8; word-break:keep-all;">죽음, 또는 쌍방 합의. <span style="color:rgba(245,240,232,0.6);">소멸 시 서로에 대한 기억이 완전히 사라진다.</span></p>
+        </div>
+      </div>
+
+      <!-- 하단 골드 라인 -->
+      <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg, transparent, #c9a84c, #e8d5a3, #c9a84c, transparent);"></div>
+    </div>
+
+  </div>
+</section>
+
+
+</body>
+</html>
